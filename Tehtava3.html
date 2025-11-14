@@ -1,0 +1,30 @@
+// HTML and JavaScript to prompt for three integers, then print sum, product, and average
+
+document.write(`
+  <label>First integer: <input id="int1" type="number"></label><br>
+  <label>Second integer: <input id="int2" type="number"></label><br>
+  <label>Third integer: <input id="int3" type="number"></label><br>
+  <button onclick="compute()">Compute</button>
+  <div id="output"></div>
+  <script>
+    function compute() {
+      const n1 = parseInt(document.getElementById('int1').value, 10);
+      const n2 = parseInt(document.getElementById('int2').value, 10);
+      const n3 = parseInt(document.getElementById('int3').value, 10);
+      if (
+        isNaN(n1) || isNaN(n2) || isNaN(n3)
+      ) {
+        document.getElementById('output').innerHTML = "Please enter all three integers.";
+        return;
+      }
+      const sum = n1 + n2 + n3;
+      const product = n1 * n2 * n3;
+      const average = sum / 3;
+      document.getElementById('output').innerHTML =
+        "<p>Sum: " + sum + "</p>" +
+        "<p>Product: " + product + "</p>" +
+        "<p>Average: " + average + "</p>";
+    }
+  </script>
+`);
+

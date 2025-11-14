@@ -10,7 +10,7 @@
     <div id="output"></div>
 
     <script>
-        // Ask user for the number of dice rolls
+        
         const numRollsStr = prompt("Enter the number of dice rolls:");
         const numRolls = parseInt(numRollsStr);
         
@@ -18,22 +18,22 @@
             let sum = 0;
             let rolls = [];
             
-            // Throw a die as many times as the user defined
+            
             for (let i = 0; i < numRolls; i++) {
-                // Math.random() * 6 gives 0-5.999..., floor it and add 1 to get 1-6
+                
                 const roll = Math.floor(Math.random() * 6) + 1;
                 rolls.push(roll);
                 sum += roll;
             }
             
-            // Display results in HTML document
+            
             document.getElementById("output").innerHTML = `
                 <p>Number of dice rolls: ${numRolls}</p>
                 <p>Individual rolls: ${rolls.join(", ")}</p>
                 <p><strong>Sum of the results: ${sum}</strong></p>
             `;
             
-            // Also print to console
+            
             console.log(`Rolled ${numRolls} dice: ${rolls.join(", ")}`);
             console.log(`Sum: ${sum}`);
         } else {

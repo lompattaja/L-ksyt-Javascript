@@ -14,13 +14,13 @@
         const studentName = prompt("Enter the student's name:");
         
         if (studentName) {
-            // Use Math.random() to draw a value (1, 2, 3, or 4)
-            // Math.random() returns 0-0.999..., so we multiply by 4 and add 1, then floor it
+            
+            
             const randomValue = Math.floor(Math.random() * 4) + 1;
             
             let house;
             
-            // Use multiple choice structure (if, else if, else)
+            
             if (randomValue === 1) {
                 house = "Gryffindor";
             } else if (randomValue === 2) {
@@ -31,7 +31,7 @@
                 house = "Ravenclaw";
             }
             
-            // Display result in HTML document
+           
             document.getElementById("output").innerHTML = `<p>${studentName}, you are ${house}.</p>`;
         } else {
             document.getElementById("output").innerHTML = "<p>Please enter a valid name.</p>";
