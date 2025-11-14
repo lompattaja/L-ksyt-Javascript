@@ -10,33 +10,21 @@
     <div id="output"></div>
 
     <script>
-        // Prompt for student's name
         const studentName = prompt("Enter the student's name:");
+        const randomValue = Math.floor(Math.random() * 4) + 1;
         
-        if (studentName) {
-            
-            
-            const randomValue = Math.floor(Math.random() * 4) + 1;
-            
-            let house;
-            
-            
-            if (randomValue === 1) {
-                house = "Gryffindor";
-            } else if (randomValue === 2) {
-                house = "Slytherin";
-            } else if (randomValue === 3) {
-                house = "Hufflepuff";
-            } else {
-                house = "Ravenclaw";
-            }
-            
-           
-            document.getElementById("output").innerHTML = `<p>${studentName}, you are ${house}.</p>`;
+        let house;
+        if (randomValue === 1) {
+            house = "Gryffindor";
+        } else if (randomValue === 2) {
+            house = "Slytherin";
+        } else if (randomValue === 3) {
+            house = "Hufflepuff";
         } else {
-            document.getElementById("output").innerHTML = "<p>Please enter a valid name.</p>";
+            house = "Ravenclaw";
         }
+        
+        document.getElementById("output").innerHTML = `<p>${studentName}, you are ${house}.</p>`;
     </script>
 </body>
 </html>
-
