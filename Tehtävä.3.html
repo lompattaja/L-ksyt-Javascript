@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehtävä 3 - Sum, Product, and Average</title>
+</head>
+<body>
+    <h1>Number Calculator</h1>
+    <div id="output"></div>
+
+    <script>
+        // Prompt for three integers
+        const num1Str = prompt("Enter the first integer:");
+        const num2Str = prompt("Enter the second integer:");
+        const num3Str = prompt("Enter the third integer:");
+        
+        // Convert strings to numbers
+        const num1 = parseInt(num1Str);
+        const num2 = parseInt(num2Str);
+        const num3 = parseInt(num3Str);
+        
+        // Calculate sum, product, and average
+        const sum = num1 + num2 + num3;
+        const product = num1 * num2 * num3;
+        const average = sum / 3;
+        
+        // Display results in HTML document
+        document.getElementById("output").innerHTML = `
+            <p>Numbers: ${num1}, ${num2}, ${num3}</p>
+            <p>Sum: ${sum}</p>
+            <p>Product: ${product}</p>
+            <p>Average: ${average.toFixed(2)}</p>
+        `;
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehtävä 2 - Greeting</title>
+</head>
+<body>
+    <h1>Greeting Program</h1>
+    <div id="output"></div>
+
+    <script>
+        // Prompt for user's name
+        const name = prompt("Please enter your name:");
+        
+        // Display greeting in HTML document
+        if (name) {
+            document.getElementById("output").innerHTML = `<p>Hello, ${name}!</p>`;
+        } else {
+            document.getElementById("output").innerHTML = "<p>Hello, Guest!</p>";
+        }
+    </script>
+</body>
+</html>
+
