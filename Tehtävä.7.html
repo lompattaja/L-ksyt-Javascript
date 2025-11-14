@@ -17,23 +17,16 @@
         if (numRolls > 0) {
             let sum = 0;
             let rolls = [];
-            
-            
             for (let i = 0; i < numRolls; i++) {
-                
                 const roll = Math.floor(Math.random() * 6) + 1;
                 rolls.push(roll);
                 sum += roll;
             }
-            
-            
             document.getElementById("output").innerHTML = `
                 <p>Number of dice rolls: ${numRolls}</p>
                 <p>Individual rolls: ${rolls.join(", ")}</p>
                 <p><strong>Sum of the results: ${sum}</strong></p>
             `;
-            
-            
             console.log(`Rolled ${numRolls} dice: ${rolls.join(", ")}`);
             console.log(`Sum: ${sum}`);
         } else {
